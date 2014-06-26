@@ -178,7 +178,7 @@ void reachability(line I, vector a, vector b, line e) {
     }
 }
 
-main()
+int main()
 {
     double I1x, I1y, I2x, I2y, ax, ay, bx, by, e1x, e1y, e2x, e2y;
 
