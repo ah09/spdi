@@ -95,7 +95,6 @@ inline double det(vector v, line e) {
    if there is no intersection then it will return null */
 point intersection(point I, vector v, line e) {
     double d = det(v, e);
-    printf("det = %f\n", d);
     double ex = e.pt1.x - e.pt2.x;
     double ey = e.pt2.y - e.pt1.y;
     double Iv = v.y*I.x - v.x*I.y;
@@ -167,14 +166,12 @@ line range(line I, line e) {
    neat way and prints a statement noting if it is unreachable */
 void reachability(line I, vector a, vector b, line e) {
     line ir = intervalRange(I, a, b, e);
-    printf("interval range is (%f, %f) to (%f, %f)\n", ir.pt1.x, ir.pt1.y, ir.pt2.x, ir.pt2.y);
-    printf("edge is (%f, %f) to (%f, %f)\n", e.pt1.x, e.pt1.y, e.pt2.x, e.pt2.y);
     if (((ir.pt1.x != ir.pt2.x) && (ir.pt1.x > e.pt2.x || ir.pt2.x < e.pt1.x)) || ((ir.pt1.x == ir.pt2.x) && (ir.pt1.y > e.pt2.y || ir.pt2.y < e.pt1.y))) {
         printf("the edge is unreachable\n");
     }
     else{
         line r = range(ir, e);
-        printf("the edge from (%f, %f) to (%f, %f) is reachable from (%f, %f) to (%f, %f)\n", e.pt1.x, e.pt1.y, e.pt2.x, e.pt2.y, r.pt1.x, r.pt1.y, r.pt2.x, r.pt2.y);
+        printf("(%f, %f) to (%f, %f)\n", r.pt1.x, r.pt1.y, r.pt2.x, r.pt2.y);
     }
 }
 
