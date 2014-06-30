@@ -167,7 +167,7 @@ line range(line I, line e) {
 void reachability(line I, vector a, vector b, line e) {
     line ir = intervalRange(I, a, b, e);
     if (((ir.pt1.x != ir.pt2.x) && (ir.pt1.x > e.pt2.x || ir.pt2.x < e.pt1.x)) || ((ir.pt1.x == ir.pt2.x) && (ir.pt1.y > e.pt2.y || ir.pt2.y < e.pt1.y))) {
-        printf("the edge is unreachable\n");
+        printf("unreachable\n");
     }
     else{
         line r = range(ir, e);
@@ -188,7 +188,7 @@ int main()
     struct point e2;
     struct line e;
 
-    printf("enter I1x, I1y, I2x, I2y, ax, ay, bx, by, e1x, e1y, e2x, e2y\n");
+    //printf("enter I1x, I1y, I2x, I2y, ax, ay, bx, by, e1x, e1y, e2x, e2y\n");
     scanf("%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf", &(I.pt1.x), &(I.pt1.y), &(I.pt2.x), &(I.pt2.y), &(a.x), &(a.y), &(b.x), &(b.y), &(e.pt1.x), &(e.pt1.y), &(e.pt2.x), &(e.pt2.y));
 
     sort(&I1x, &I2x, &I1y, &I2y);
