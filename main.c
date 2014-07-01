@@ -171,7 +171,7 @@ void reachability(line I, vector a, vector b, line e) {
     }
     else{
         line r = range(ir, e);
-        printf("(%f, %f) to (%f, %f)\n", r.pt1.x, r.pt1.y, r.pt2.x, r.pt2.y);
+        printf("%f %f %f, %f\n", r.pt1.x, r.pt1.y, r.pt2.x, r.pt2.y);
     }
 }
 
